@@ -1,0 +1,65 @@
+<%- include("./partials/header2.ejs") -%>
+
+    <header>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+            </li>
+          </ul>
+          <form class="d-flex" action="/signup" method="post" style="margin-right: 10px;">
+            <button class="btn btn-outline-light" type="submit">Sign Up</button>
+          </form>
+          <form class="d-flex" action="/signin" method="post">
+            <button class="btn btn-outline-light" type="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>    
+
+    <div class="container-fluid" id="meetpeople" style="margin-top: 150px;">
+        <h1 class="text-center fw-blod display-3" style="margin-bottom: 50px;">Meet <span class="text-danger">New People</span></h1>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="card">
+                    <img src=".\public\images\profile3.png" alt="alt-image" class="card-img-top">
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src=".\public\images\profile4.png" alt="alt-image" class="card-img-top">
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src=".\public\images\profile5.png" alt="alt-image" class="card-img-top">
+                </div>
+            </div>
+            <div class="item">
+                <div class="card">
+                    <img src=".\public\images\profile6.png" alt="alt-image" class="card-img-top">
+                </div>
+            </div>
+            <div class="item">
+              <div class="card">
+                  <img src=".\public\images\profile7.png" alt="alt-image" class="card-img-top">
+              </div>
+          </div>
+        </div>
+        
+    </div>
+    
+<%- include("./partials/footer2.ejs") -%>

@@ -1,0 +1,55 @@
+<%- include("partials/header.ejs") -%>
+
+<div class="container-fluid" id="header">
+  <% var number = Math.floor(Math.random() * 7) + 1; %>
+  <header class="p-3 mb-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <img src="public\images\logo.png" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></img>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/home" class="nav-link px-2 link-secondary">HOME</a></li>
+        <li><a href="/users" class="nav-link px-2 link-dark">USERS</a></li>
+      </ul>
+
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <div class="dropdown text-end">
+        <form class="d-flex">
+          <a href="#" class="d-block link-dark text-decoration-none" id="dropdownUser1" aria-expanded="false"  style="padding-right: 10px;">
+            <img src="public\images\profile<%= number %>.png" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <form action="/out" method="post">
+            <button class="btn btn-labeled btn-danger" type="submit">
+              <span class="btn-label"><i class="fa-solid fa-right-from-bracket"></i></span>Log off</button>
+          </form>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+
+
+<div class="container-fluid" id="body" style="margin-top: 60px;">
+  <div class="card">
+    <img src="public\images\profile<%= number %>.png" alt="John" style="width:100%">
+    <h1><%= fullName %></h1>
+    <p class="title">CEO & Founder</p>
+    <p>Harvard University</p>
+    <p><%= contact %></p>
+    <form action="/delete" method="post">
+      <p><button type="submit" name="id" value="<%= userId %>">Sign Out!</button></p>
+    </form>
+    
+  </div>
+</div>
+
+
+
+<%- include("partials/footer.ejs") -%>

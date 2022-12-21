@@ -1,0 +1,32 @@
+<%- include("partials/header") -%>
+
+<div class="container-fluid" id="header">
+  <header class="p-3 mb-3 border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <img src="public\images\logo.png" class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></img>
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/home" class="nav-link px-2 link-secondary">HOME</a></li>
+      </ul>
+
+  </div>
+</header>
+</div>
+
+
+<form class="form-signin" method="post" action="/search">
+    <img class="mb-4" src=" ./public/images/logo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="email" class="form-control top" name="email" placeholder="Email" required autofocus>
+    <input type="password" class="form-control bottom" name="password" placeholder="password" required>
+    <div class="checkbox mb-3">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In!</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+  </form>
+
+
+  <%- include("partials/footer") -%>
